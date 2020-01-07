@@ -70,7 +70,7 @@ export default class MultiSlider extends React.Component {
     };
   }
 
-  componentWillMount() {
+  componentDidMount() {
     var customPanResponder = (start, move, end) => {
       return PanResponder.create({
         onStartShouldSetPanResponder: (evt, gestureState) => true,
@@ -85,7 +85,7 @@ export default class MultiSlider extends React.Component {
         onShouldBlockNativeResponder: (evt, gestureState) => true,
       });
     };
-    
+
     this._panResponderBetween = customPanResponder(
       (gestureState) => {
         this.startOne(gestureState);
@@ -113,7 +113,7 @@ export default class MultiSlider extends React.Component {
     );
   }
 
-  componentWillReceiveProps(nextProps) {
+  shouldComponentUpdate(nextProps) {
     if (this.state.onePressed || this.state.twoPressed) {
       return;
     }
@@ -519,7 +519,7 @@ export default class MultiSlider extends React.Component {
           oneMarkerLeftPosition={positionOne}
           twoMarkerLeftPosition={positionTwo}
         />
-        {this.props.imageBackgroundSource && 
+        {this.props.imageBackgroundSource &&
           <ImageBackground source={this.props.imageBackgroundSource} style={[{width: '100%', height: '100%'}, containerStyle]}>
             {body}
           </ImageBackground>

@@ -60,6 +60,6 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     textAlign: 'center',
     fontStyle: 'normal',
-    fontSize: 11
+    fontSize: 16,
   },
 });

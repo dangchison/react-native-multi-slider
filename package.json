@@ -1,11 +1,11 @@
 {
-  "name": "dangchison/react-native-multi-slider",
+  "name": "@ptomasroos/react-native-multi-slider",
   "version": "2.0.0",
   "description": "Android and iOS supported pure JS slider component with multiple markers for React Native",
   "main": "MultiSlider.js",
   "scripts": {
     "prettier": "prettier --single-quote --trailing-comma all --bracket-spacing --write \"**/*.js\""
-  },  
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/dangchison/react-native-multi-slider.git"
